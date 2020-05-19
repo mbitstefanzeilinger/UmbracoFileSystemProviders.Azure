@@ -1,5 +1,12 @@
 # UmbracoFileSystemProviders.Azure v2
 
+**This branch was created to enable the already existing UmbracoFileSystemProviders.Azure v2 be able to use Azure KeyVault to retrieve the Azure Storage Connection String instead of putting it in the web.config.**
+
+Add this appSetting to web.config:
+```xml
+<add key="AzureBlobFileSystem.ConnectionStringKeyVault:media" value="[VaultUrl]" />
+```
+
 **This version is for Umbraco v8 only**. For the v1 package for **Umbraco v7** please visit the [develop branch](https://github.com/umbraco-community/UmbracoFileSystemProviders.Azure/tree/develop)
 
 ![Image Alt](build/assets/logo/azure-logo-256.png)

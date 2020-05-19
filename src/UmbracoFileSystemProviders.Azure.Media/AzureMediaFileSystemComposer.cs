@@ -16,7 +16,7 @@
             if (connectionString != null)
             {
                 //Configuration
-                var config = CreateConfiguration();
+                var config = this.CreateConfiguration();
 
                 //Reads config from AppSetting keys
                 composition.RegisterUnique(config);

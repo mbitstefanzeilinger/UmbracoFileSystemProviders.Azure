@@ -17,7 +17,6 @@ namespace Our.Umbraco.FileSystemProviders.Azure
     using System.Text.RegularExpressions;
     using System.Web;
     using global::Umbraco.Core.Composing;
-    using global::Umbraco.Core.Configuration;
     using global::Umbraco.Core.IO;
     using global::Umbraco.Core.Logging;
     using Microsoft.Azure.Storage;
@@ -96,12 +95,12 @@ namespace Our.Umbraco.FileSystemProviders.Azure
                 throw new ArgumentNullException(nameof(containerName));
             }
 
-            this.DisableVirtualPathProvider = ConfigurationManager.AppSettings[DisableVirtualPathProviderKey] != null
-                                              && ConfigurationManager.AppSettings[DisableVirtualPathProviderKey]
+            this.DisableVirtualPathProvider = ConfigurationHelper.GetAppSetting(DisableVirtualPathProviderKey) != null
+                                              && ConfigurationHelper.GetAppSetting(DisableVirtualPathProviderKey)
                                              .Equals("true", StringComparison.InvariantCultureIgnoreCase);
 
-            bool useEmulator = ConfigurationManager.AppSettings[UseStorageEmulatorKey] != null
-                               && ConfigurationManager.AppSettings[UseStorageEmulatorKey]
+            bool useEmulator = ConfigurationHelper.GetAppSetting(UseStorageEmulatorKey) != null
+                               && ConfigurationHelper.GetAppSetting(UseStorageEmulatorKey)
                                                       .Equals("true", StringComparison.InvariantCultureIgnoreCase);
 
             CloudStorageAccount cloudStorageAccount;

@@ -4,6 +4,7 @@
     <add key="AzureBlobFileSystem.ContainerName:media" value="media" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
     <add key="AzureBlobFileSystem.RootUrl:media" value="https://[myAccountName].blob.core.windows.net/"  xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing"/>
     <add key="AzureBlobFileSystem.ConnectionString:media" value="DefaultEndpointsProtocol=https;AccountName=[myAccountName];AccountKey=[myAccountKey]" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing"/>
+    <add key="AzureBlobFileSystem.ConnectionStringKeyVault:media" value="[VaultUrl]" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing"/>
     <add key="AzureBlobFileSystem.MaxDays:media" value="365" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
     <add key="AzureBlobFileSystem.UseDefaultRoute:media" value="true" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
     <add key="AzureBlobFileSystem.UsePrivateContainer:media" value="false" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />

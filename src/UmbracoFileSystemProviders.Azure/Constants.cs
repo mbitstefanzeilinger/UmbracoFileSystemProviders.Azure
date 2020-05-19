@@ -41,6 +41,11 @@ namespace Our.Umbraco.FileSystemProviders.Azure
             public const string ConnectionStringKey = "AzureBlobFileSystem.ConnectionString";
 
             /// <summary>
+            /// The configuration key for providing the connection string via keyVault, ConnectionString can be left empty.
+            /// </summary>
+            public const string ConnectionStringKeyVaultKey = "AzureBlobFileSystem.ConnectionStringKeyVault";
+
+            /// <summary>
             /// The configuration key for providing the Azure Blob Container Name via the web.config
             /// </summary>
             public const string ContainerNameKey = "AzureBlobFileSystem.ContainerName";
